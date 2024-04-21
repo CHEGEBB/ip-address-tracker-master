@@ -1,5 +1,7 @@
 import '../index.scss';
 import ArrowIcon from '../assets/icon-arrow.svg';
+import { useEffect, useState } from 'react';
+
 
 
 const TrackerComponent = () => {
