@@ -39,7 +39,9 @@ input {
 .details{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
   background-color:aqua;
   margin-top: -90px;
   height: 180px;
@@ -47,4 +49,7 @@ input {
   border-radius: 12px;
 
 
+}
+h3{
+  color: red;
 }
