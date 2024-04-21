@@ -1,4 +1,5 @@
 $background-color: red;
+$white: #fff;
 $color: #333;
 $backgroundimage: url('./assets/pattern-bg-desktop.png');
 
@@ -38,11 +39,12 @@ input {
 .details{
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  background-color: red;
+  justify-content: space-between;
+  background-color:aqua;
   margin-top: -90px;
   height: 180px;
   padding: 20px;
   border-radius: 12px;
+
 
 }
