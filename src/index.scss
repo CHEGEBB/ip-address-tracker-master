@@ -54,11 +54,12 @@ input {
   gap: 100px;
   justify-content: center;
   align-items: center;
-  background-color:aqua;
+  background-color:$white;
   margin-top: -90px;
   height: 180px;
   padding: 10px;
   border-radius: 12px;
+  margin-left: -20px;
   
 
 
@@ -67,9 +68,9 @@ input {
   @include header3;
 }
 .rectangle{
-  width: 20px;
+  width: 1px;
   height: 100px;
-  background-color: red;
+  background-color: hsl(0, 0%, 59%);
   border-radius: 12px;
   margin-top: 20px;
   margin-left: 20px;
