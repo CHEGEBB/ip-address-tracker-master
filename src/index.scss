@@ -35,3 +35,12 @@ input {
 
   
 }
+.details{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: red;
+  margin-top: -90px;
+  height: 200px;
+
+}
