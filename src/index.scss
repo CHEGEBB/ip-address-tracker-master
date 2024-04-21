@@ -59,12 +59,18 @@ input {
   height: 180px;
   padding: 10px;
   border-radius: 12px;
+  
 
 
 }
 .details h3{
   @include header3;
 }
-.ip-address{
-  @include details-card;
+.rectangle{
+  width: 20px;
+  height: 100px;
+  background-color: red;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
