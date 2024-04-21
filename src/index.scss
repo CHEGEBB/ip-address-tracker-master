@@ -4,11 +4,12 @@ $color: #333;
 body {
   background-color: $backgroundcolor;
   color: $color;
+  overflow-x: hidden;
 }
 .header{
-  background-image: url('./assets/pattern-bg-desktop.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  margin-top: 10px auto;
+background-color: red;
+height: 300px;
+width: 2000px;
+margin-left: -350px;
+  
 }
