@@ -1,11 +1,11 @@
-import Tracker from './components/tracker.ts'
+import Tracker from './components/tracker.tsx'
 
 function App() {
 
   return (
-    <>
-    <Tracker />
-    </>
+   <div className="App">
+      <Tracker />
+   </div>
   )
 }
 
