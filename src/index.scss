@@ -6,5 +6,9 @@ body {
   color: $color;
 }
 .header{
-  background-image: url('../');
+  background-image: url('./assets/pattern-bg-desktop.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin-top: 10px auto;
 }
