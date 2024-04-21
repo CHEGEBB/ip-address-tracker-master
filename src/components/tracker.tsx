@@ -2,9 +2,10 @@
 
 const TrackerComponent = () => {
     return ( 
+        <div className="container">
         <div className="tracker">
             <div className="header">
-                <input type='text' placeholder='Enter your  ip address' />
+                <input type='text' placeholder='Search for any ip or domain' />
             </div>
             <div className="details">
                 <div className="ip-address">
@@ -20,6 +21,11 @@ const TrackerComponent = () => {
                     <h3>ISP</h3>
                     </div>
             </div>
+        </div>
+        <div className="map-leaflet">
+            <div className="map" id="mapid">
+            </div>
+        </div>
         </div>
      );
 }
