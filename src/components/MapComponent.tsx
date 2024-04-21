@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import '../index.scss'
 
 interface MapProps {
   ipAddress: string;

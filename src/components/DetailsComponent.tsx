@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import '../index.scss';
+
 
 interface DetailsProps {
   ipAddress: string;
