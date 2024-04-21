@@ -3,6 +3,18 @@ $white: #fff;
 $color: #333;
 $backgroundimage: url('./assets/pattern-bg-desktop.png');
 
+@mixin header3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(0, 0%, 59%);
+  margin-top: -40px;
+  margin-left: 20px;
+}
+@mixin details-card{
+  width: 200px;
+  background-color: red;
+}
+
 body {
   background-color: $background-color;
   color: $color;
@@ -45,11 +57,14 @@ input {
   background-color:aqua;
   margin-top: -90px;
   height: 180px;
-  padding: 20px;
+  padding: 10px;
   border-radius: 12px;
 
 
 }
-h3{
-  color: red;
+.details h3{
+  @include header3;
+}
+.ip-address{
+  @include details-card;
 }
