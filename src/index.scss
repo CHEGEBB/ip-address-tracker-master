@@ -1,9 +1,9 @@
-$backgroundcolor: #fff;
+$background-color: red;
 $color: #333;
 $backgroundimage: url('./assets/pattern-bg-desktop.png');
 
 body {
-  background-color: $backgroundcolor;
+  background-color: $background-color;
   color: $color;
   overflow-x: hidden;
 }
@@ -41,6 +41,8 @@ input {
   gap: 20px;
   background-color: red;
   margin-top: -90px;
-  height: 200px;
+  height: 180px;
+  padding: 20px;
+  border-radius: 12px;
 
 }
