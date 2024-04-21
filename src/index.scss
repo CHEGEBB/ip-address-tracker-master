@@ -14,6 +14,11 @@ $backgroundimage: url('./assets/pattern-bg-desktop.png');
   width: 200px;
   background-color: red;
 }
+.container {
+z-index: 3;
+position: relative;
+width: 100%;
+}
 
 body {
   color: $color;
@@ -26,6 +31,8 @@ background-size: cover;
 height: 270px;
 width: 2000px;
 margin-left: -350px;
+z-index: 1;
+position: relative;
   
 }
 input {
