@@ -9,8 +9,7 @@ const TrackerComponent = () => {
                 <div className="header">
                     <div className="input">
                     <input type='text' id="searchInput" placeholder='Search for any IP adress or domain' />
-                    <button id="searchButton"><img src={ArrowIcon} alt="arrow" /></button>
-                    
+                    <img className='arrow' src={ArrowIcon} alt="arrow" />
                     </div>
                    
                 </div>

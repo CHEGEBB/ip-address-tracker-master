@@ -34,7 +34,8 @@ input {
   height: 55px;
   padding: 20px;
   border: none;
-  border-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
   margin-top: 20px;
   margin-bottom: 20px;
  
@@ -47,6 +48,23 @@ input {
   padding-top: 80px;
 
   
+}
+.arrow{
+  background-color:#000;
+  width: 50px;
+  position: relative;
+  left: 500px;
+  top: -55px;
+  height: 55px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+.arrow img{
+  width: 10px;
+  height: 10px;
 }
 .details{
   display: flex;
