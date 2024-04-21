@@ -1,4 +1,5 @@
 import '../index.scss';
+import ArrowIcon from '../assets/icon-arrow.svg';
 
 
 const TrackerComponent = () => {
@@ -8,6 +9,7 @@ const TrackerComponent = () => {
                 <div className="header">
                     <div className="input">
                     <input type='text' id="searchInput" placeholder='Search for any IP adress or domain' />
+                    
                     </div>
                    
                 </div>
