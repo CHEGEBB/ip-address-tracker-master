@@ -1,5 +1,6 @@
 $backgroundcolor: #fff;
 $color: #333;
+$backgroundimage: url('./assets/pattern-bg-desktop.png');
 
 body {
   background-color: $backgroundcolor;
@@ -7,8 +8,10 @@ body {
   overflow-x: hidden;
 }
 .header{
-background-color: red;
-height: 300px;
+background-image: $backgroundimage;
+background-repeat: no-repeat;
+background-size: cover;
+height: 270px;
 width: 2000px;
 margin-left: -350px;
   
