@@ -6,7 +6,10 @@ const TrackerComponent = () => {
         <div className="container">
             <div className="tracker">
                 <div className="header">
-                    <input type='text' id="searchInput" placeholder='Enter IP or domain' />
+                    <div className="input">
+                    <input type='text' id="searchInput" placeholder='Search for any IP adress or domain' />
+                    </div>
+                   
                 </div>
                 <div className="details">
                     <div className="ip-address">
