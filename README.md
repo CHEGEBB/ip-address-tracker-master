@@ -1,5 +1,10 @@
 # React + TypeScript + Vite + Sass
 
+
+
+![desktop-preview](https://github.com/CHEGEBB/ip-address-tracker-master/assets/123733116/eb9c5d23-c562-455a-82ed-7c27036b1fe7)
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
