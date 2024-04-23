@@ -1,4 +1,5 @@
 import React from 'react';
+import Details from './components/Details';
 
 function App() {
   return (
@@ -8,6 +9,9 @@ function App() {
           <h1>Ip Address Tracker</h1>
           <div className="search">
             <input type="text" placeholder="Search for any IP address or domain" />
+          </div>
+          <div className="details container">
+            <Details />
           </div>
         </div>
         <div className="map">
