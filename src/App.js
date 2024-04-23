@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Details from './components/Details';
+import Map from './components/Map';
 import ArrowSearch from './images/icon-arrow.svg';
 import './index.scss';
 
@@ -34,6 +35,7 @@ function App() {
         <div className="map">
           <div className="map-container container-fluid">
             <div id="map"></div>
+            <Map location={ipAddress} />
           </div>
         </div>
       </div>
