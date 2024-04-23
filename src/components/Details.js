@@ -32,7 +32,7 @@ const DetailsComponent = ({ ipAddress }) => {
             <div className="rectangle"></div>
             <div className="timezone">
                 <h2>Timezone</h2>
-                <p>UTC{data ? data.location.timezone : ''}</p>
+                <p>{data ? data.location.timezone : ''}</p>
             </div>
             <div className="rectangle"></div>
             <div className="isp">
