@@ -11,14 +11,21 @@ const customIcon = new L.Icon({
   popupAnchor: [0, -32],
 });
 
-const MapComponent = ({ ipAddress }) => {
+const MapComponent = ({ ipAddress, domainName }) => {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
   const [mapKey, setMapKey] = useState(0);
 
   useEffect(() => {
-    if (ipAddress) {
-      fetch(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_FmXFZwde4mKjnu2Kl080K9NxVF3iW&ipAddress=${ipAddress}`)
+    if (ipAddress || domainName) {
+      let url = `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_FmXFZwde4mKjnu2Kl080K9NxVF3iW&`;
+      if (ipAddress) {
+        url += `ipAddress=${ipAddress}`;
+      } else {
+        url += `domain=${domainName}`;
+      }
+
+      fetch(url)
         .then(res => res.json())
         .then(data => {
           if (data.location) {
@@ -31,7 +38,7 @@ const MapComponent = ({ ipAddress }) => {
           console.error('Error fetching data:', error);
         });
     }
-  }, [ipAddress]);
+  }, [ipAddress, domainName]);
 
   return (
     <MapContainer
