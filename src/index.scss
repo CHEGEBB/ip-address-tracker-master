@@ -17,7 +17,10 @@ $font-family: "Rubik", sans-serif;
   width: 500px;
   margin-top: 30px;
   margin-left: 650px;
-  height: 50px;
+  height: 60px;
+  font-size: 1.2rem;
+  color: #333;
+  font-family: $font-family;
 }
 
 @mixin details-cards {
@@ -40,7 +43,7 @@ body {
   background-image: url("./images/pattern-bg-desktop.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 470px;
+  height: 300px;
 }
 
 .details {
@@ -89,8 +92,8 @@ input {
   background-color: black;
   border: none;
   padding: 10px;
-  height: 51px;
-  width: 50px;
+  height: 61px;
+  width: 60px;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
 }
@@ -135,6 +138,5 @@ input {
   width: 100%;
   height: 100%;
   z-index: -1;
-  margin-top: -350px;
-  padding: -300px 0px;
+  margin-top: -600px;
 }

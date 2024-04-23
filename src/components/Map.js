@@ -39,7 +39,7 @@ const MapComponent = ({ ipAddress }) => {
       key={mapKey} // Change key to force remount of MapContainer
       center={[latitude || 0, longitude || 0]}
       zoom={13}
-      style={{ height: '400px', width: '100%' }}
+      style={{ height: '800px', width: '100%' }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
