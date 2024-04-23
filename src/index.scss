@@ -18,6 +18,10 @@ $font-family: 'Rubik', sans-serif;
   margin-left: 650px;
   height: 50px;
 }
+@mixin details-cards{
+  width: 250px;
+  background-color: red;
+}
 
 
 
@@ -39,7 +43,7 @@ body{
   margin-top:40px;
   display: flex;
   flex-direction: row;
-  gap: 60px;
+  gap: 90px;
 }
 h1{
   color: #fff;
@@ -63,4 +67,13 @@ input {
 .search-button img {
   width: 15px;
   height: 15px;
+}
+.ip, .location, .timezone, .isp {
+  @include details-cards;
+}
+.rectangle{
+  width: 2px;
+  height: 80px;
+  background-color: #333;
+  margin-top: -10px;
 }
