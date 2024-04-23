@@ -31,13 +31,14 @@ function App() {
           <div className="details container">
             <Details ipAddress={ipAddress} />
           </div>
-        </div>
+        
         <div className="map">
           <div className="map-container container-fluid">
             <div id="map">
             </div>
             <Map ipAddress={ipAddress} />
           </div>
+        </div>
         </div>
       </div>
     </div>

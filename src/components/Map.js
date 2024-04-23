@@ -14,6 +14,7 @@ const customIcon = new L.Icon({
 const MapComponent = ({ ipAddress }) => {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
+  const [mapKey, setMapKey] = useState(0); // Key to force remount of MapContainer
 
   useEffect(() => {
     if (ipAddress) {
@@ -23,6 +24,8 @@ const MapComponent = ({ ipAddress }) => {
           if (data.location) {
             setLatitude(data.location.lat);
             setLongitude(data.location.lng);
+            // Increment mapKey to force remount of MapContainer
+            setMapKey(prevKey => prevKey + 1);
           }
         })
         .catch(error => {
@@ -33,7 +36,8 @@ const MapComponent = ({ ipAddress }) => {
 
   return (
     <MapContainer
-      center={[latitude || 0, longitude || 0]} // Center the map at [0, 0] if latitude and longitude are not available
+      key={mapKey} // Change key to force remount of MapContainer
+      center={[latitude || 0, longitude || 0]}
       zoom={13}
       style={{ height: '400px', width: '100%' }}
     >
@@ -41,7 +45,7 @@ const MapComponent = ({ ipAddress }) => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {latitude && longitude && ( // Render marker only if latitude and longitude are available
+      {latitude && longitude && (
         <Marker position={[latitude, longitude]} icon={customIcon}>
           <Popup>
             Latitude: {latitude}, Longitude: {longitude}
