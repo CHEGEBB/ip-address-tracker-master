@@ -32,25 +32,23 @@ const MapComponent = ({ ipAddress }) => {
   }, [ipAddress]);
 
   return (
-    <div>
-      {latitude && longitude && (
-        <MapContainer
-          center={[latitude, longitude]}
-          zoom={13}
-          style={{ height: '400px', width: '100%' }}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={[latitude, longitude]} icon={customIcon}>
-            <Popup>
-              Latitude: {latitude}, Longitude: {longitude}
-            </Popup>
-          </Marker>
-        </MapContainer>
+    <MapContainer
+      center={[latitude || 0, longitude || 0]} // Center the map at [0, 0] if latitude and longitude are not available
+      zoom={13}
+      style={{ height: '400px', width: '100%' }}
+    >
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      {latitude && longitude && ( // Render marker only if latitude and longitude are available
+        <Marker position={[latitude, longitude]} icon={customIcon}>
+          <Popup>
+            Latitude: {latitude}, Longitude: {longitude}
+          </Popup>
+        </Marker>
       )}
-    </div>
+    </MapContainer>
   );
 };
 
