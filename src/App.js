@@ -32,7 +32,7 @@ function App() {
             <Details ipAddress={ipAddress} />
           </div>
         
-        <div className="map">
+        <div className="map" style={{height:'900px'}}>
           <div className="map-container container-fluid">
             <div id="map">
             </div>

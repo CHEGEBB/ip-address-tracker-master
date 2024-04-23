@@ -40,7 +40,7 @@ body {
   background-image: url("./images/pattern-bg-desktop.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 470px;
 }
 
 .details {
@@ -94,6 +94,9 @@ input {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
 }
+.search-button:hover {
+  cursor: pointer;
+}
 
 .search-button img {
   width: 15px;
@@ -125,9 +128,6 @@ input {
   height: 600px;
  
 }
-.tracker{
-  background-color: red;
-}
 .map{
   position: absolute;
   top: 0;
@@ -135,5 +135,5 @@ input {
   width: 100%;
   height: 100%;
   z-index: -1;
-  margin-top: -300px;
+  margin-top: -100px;
 }
