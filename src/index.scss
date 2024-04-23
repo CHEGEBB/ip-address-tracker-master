@@ -87,6 +87,7 @@ input {
 .timezone,
 .isp {
   @include details-cards;
+  background-color: red;
 }
 .rectangle {
   width: 2px;

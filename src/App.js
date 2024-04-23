@@ -1,22 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Details from './components/Details';
 import ArrowSearch from './images/icon-arrow.svg';
 import './index.scss';
 
 function App() {
+  const [searchInput, setSearchInput] = useState('');
+  const [ipAddress, setIpAddress] = useState('');
+
+  const handleSearch = () => {
+    setIpAddress(searchInput.trim());
+  };
+
   return (
     <div className="App">
       <div className="tracker">
         <div className="header  container-fluid">
           <h1>Ip Address Tracker</h1>
           <div className="search">
-            <input type="text" placeholder="Search for any IP address or domain" />
-         <button  className="search-button">
-         <img src={ArrowSearch} alt="search" />
-         </button>   
+            <input
+              type="text"
+              placeholder="Search for any IP address or domain"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+            />
+            <button className="search-button" onClick={handleSearch}>
+              <img src={ArrowSearch} alt="search" />
+            </button>
           </div>
           <div className="details container">
-            <Details />
+            <Details ipAddress={ipAddress} />
           </div>
         </div>
         <div className="map">
