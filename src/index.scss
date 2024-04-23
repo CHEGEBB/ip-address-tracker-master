@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-$font-family: 'Rubik', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+$font-family: "Rubik", sans-serif;
 
-@mixin header-items{
+@mixin header-items {
   text-align: center;
   justify-content: center;
   align-items: center;
   padding-top: 50px;
 }
-@mixin input-items{
+@mixin input-items {
   padding: 10px;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
@@ -15,18 +15,14 @@ $font-family: 'Rubik', sans-serif;
   outline: none;
   width: 500px;
   margin-top: 30px;
-  margin-left:650px;
+  margin-left: 650px;
   height: 50px;
 }
-@mixin details-cards{
+@mixin details-cards {
   width: 250px;
 }
 
-
-
-
-
-body{
+body {
   font-family: $font-family;
   background-color: #333;
 }
@@ -34,24 +30,42 @@ body{
   background-image: url("./images/pattern-bg-desktop.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height:300px;
+  height: 300px;
 }
-.details{
+.details {
   background-color: #fff;
   border-radius: 15px;
   padding: 20px;
-  margin-top:40px;
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
   gap: 90px;
+
+  .details-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  h2{
+    color: hsl(0, 0%, 59%);
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-top: -20px;
+  }
+  p{
+    color: hsl(0, 0%, 17%);
+    font-size: 27px;
+    font-weight: 600;
+  
+  }
 }
-.header h1{
+.header h1 {
   color: #fff;
   font-size: 2.5rem;
   font-weight: 500;
   @include header-items;
 }
- input {
+input {
   @include input-items;
 }
 .search-button {
@@ -68,10 +82,13 @@ body{
   width: 15px;
   height: 15px;
 }
-.ip, .location, .timezone, .isp {
+.ip,
+.location,
+.timezone,
+.isp {
   @include details-cards;
 }
-.rectangle{
+.rectangle {
   width: 2px;
   height: 80px;
   background-color: #333;
