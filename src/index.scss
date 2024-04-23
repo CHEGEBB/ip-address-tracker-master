@@ -15,20 +15,20 @@ $font-family: 'Rubik', sans-serif;
   outline: none;
   width: 500px;
   margin-top: 30px;
-  margin-left: 650px;
+  margin-left:650px;
   height: 50px;
 }
 @mixin details-cards{
   width: 250px;
-  background-color: red;
 }
+
 
 
 
 
 body{
-  background-color: #333;
   font-family: $font-family;
+  background-color: #333;
 }
 .header {
   background-image: url("./images/pattern-bg-desktop.png");
@@ -45,13 +45,13 @@ body{
   flex-direction: row;
   gap: 90px;
 }
-h1{
+.header h1{
   color: #fff;
   font-size: 2.5rem;
   font-weight: 500;
   @include header-items;
 }
-input {
+ input {
   @include input-items;
 }
 .search-button {

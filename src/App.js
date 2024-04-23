@@ -1,6 +1,7 @@
 import React from 'react';
 import Details from './components/Details';
 import ArrowSearch from './images/icon-arrow.svg';
+import './index.scss';
 
 function App() {
   return (
