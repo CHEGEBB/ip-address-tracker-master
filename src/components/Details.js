@@ -2,21 +2,29 @@ import React, { useEffect, useState } from 'react';
 import '../index.scss';
 
 const DetailsComponent = ({ ipAddress, domainName }) => {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState();
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 let url = '';
+                let targetAddress = '';
+
                 if (ipAddress) {
-                    url = `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_FmXFZwde4mKjnu2Kl080K9NxVF3iW&ipAddress=${ipAddress}`;
+                    targetAddress = ipAddress;
                 } else if (domainName) {
                     // Resolve domain to IP address
-                    const ipAddress = await resolveDomainToIp(domainName);
-                    if (ipAddress) {
-                        url = `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_FmXFZwde4mKjnu2Kl080K9NxVF3iW&ipAddress=${ipAddress}`;
+                    const resolvedIpAddress = await resolveDomainToIp(domainName);
+                    if (resolvedIpAddress) {
+                        targetAddress = resolvedIpAddress;
                     }
+                } else {
+                    // Default to 8.8.8.8 if neither ipAddress nor domainName is provided
+                    targetAddress = '8.8.8.8';
                 }
+
+                url = `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_FmXFZwde4mKjnu2Kl080K9NxVF3iW&ipAddress=${targetAddress}`;
+
                 if (url) {
                     const response = await fetch(url);
                     const responseData = await response.json();
