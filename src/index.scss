@@ -11,8 +11,11 @@ body{
   height: 280px;
 }
 .details{
-  background-color: #fff;
+  background-color: #000;
   border-radius: 10px;
   padding: 20px;
-  margin-top: 50px;
+  margin-top:90px;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
 }
