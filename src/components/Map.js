@@ -14,7 +14,7 @@ const customIcon = new L.Icon({
 const MapComponent = ({ ipAddress }) => {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
-  const [mapKey, setMapKey] = useState(0); // Key to force remount of MapContainer
+  const [mapKey, setMapKey] = useState(0);
 
   useEffect(() => {
     if (ipAddress) {
@@ -24,7 +24,6 @@ const MapComponent = ({ ipAddress }) => {
           if (data.location) {
             setLatitude(data.location.lat);
             setLongitude(data.location.lng);
-            // Increment mapKey to force remount of MapContainer
             setMapKey(prevKey => prevKey + 1);
           }
         })
@@ -36,7 +35,7 @@ const MapComponent = ({ ipAddress }) => {
 
   return (
     <MapContainer
-      key={mapKey} // Change key to force remount of MapContainer
+      key={mapKey}
       center={[latitude || 0, longitude || 0]}
       zoom={13}
       style={{ height: '800px', width: '100%' }}
