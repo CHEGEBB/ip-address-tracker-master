@@ -28,7 +28,7 @@ function App() {
               <img src={ArrowSearch} alt="search" />
             </button>
           </div>
-          <div className="details container">
+          <div className="details">
             <Details ipAddress={ipAddress} />
           </div>
         
