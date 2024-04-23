@@ -1,6 +1,7 @@
 # Frontend Mentor - IP address tracker
 
-![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)
+![desktop-preview](https://github.com/CHEGEBB/ip-address-tracker-master/assets/123733116/366d637c-1987-4204-b424-443e18db7542)
+
 
 ## Welcome! 👋
 
