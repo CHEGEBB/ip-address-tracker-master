@@ -6,7 +6,7 @@ const DetailsComponent = ({ ipAddress }) => {
 
     useEffect(() => {
         if (ipAddress) {
-            fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_FmXFZwde4mKjnu2Kl080K9NxVF3iW&ipAddress=${ipAddress}`)
+            fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_FmXFZwde4mKjnu2Kl080K9NxVF3iW&ipAddress=${ipAddress}`)
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
