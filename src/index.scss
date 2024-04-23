@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+$font-family: 'Rubik', sans-serif;
+
 
 
 
 body{
   background-color: #333;
+  font-family: $font-family;
 }
 .header {
   background-image: url("./images/pattern-bg-desktop.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 280px;
+  height:300px;
 }
 .details{
   background-color: #000;
