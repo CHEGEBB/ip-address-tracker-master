@@ -1,5 +1,6 @@
 import React from 'react';
 import Details from './components/Details';
+import ArrowSearch from './images/icon-arrow.svg';
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
           <h1>Ip Address Tracker</h1>
           <div className="search">
             <input type="text" placeholder="Search for any IP address or domain" />
+         <button  className="search-button">
+         <img src={ArrowSearch} alt="search" />
+         </button>   
           </div>
           <div className="details container">
             <Details />

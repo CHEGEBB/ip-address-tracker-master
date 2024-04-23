@@ -49,3 +49,13 @@ h1{
 input {
   @include input-items;
 }
+.search-button {
+  background-color: black;
+  border: none;
+  padding: 10px;
+}
+
+.search-button img {
+  width: 20px;
+  height: auto;
+}
