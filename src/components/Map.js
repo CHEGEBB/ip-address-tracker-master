@@ -66,7 +66,7 @@ const MapComponent = ({ ipAddress, domainName }) => {
       key={mapKey}
       center={[latitude, longitude]}
       zoom={13}
-      style={{ height: '800px', width: '100%' }}
+      style={{ height: '400px', width: '100%' }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
