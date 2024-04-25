@@ -31,6 +31,7 @@ function App() {
           <div className="details">
             <Details ipAddress={ipAddress} />
           </div>
+          //details
         
         <div className="map" style={{height:'900px'}}>
           <div className="map-container container-fluid">
